@@ -4,10 +4,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   root 'pages#home'
+  get 'about', to: 'pages#about'
 end
+
+# 3
+# to: controllerName#actionName
 
 # 2 send it to pages
 # root 'application#hello'
+
 # 1
 # root 'application'
 # means it goes to 
