@@ -1,5 +1,8 @@
 # alpha-blog
 
+### Deploy to production using 
+  - Heroku - production hosting servise 
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
