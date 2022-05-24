@@ -2,6 +2,7 @@
 
 ### Deploy to production using 
   - Heroku - production hosting servise 
+  [open](https://oybekkayumov-alpha-blog.herokuapp.com/about)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
