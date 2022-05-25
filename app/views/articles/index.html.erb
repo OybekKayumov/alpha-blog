@@ -1,0 +1,27 @@
+<h1>Article listing page</h1>
+<p>rendering from /views/articles/index.html.erb</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td>placeholder</td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%# <td>some title</td>
+<td>some description</td>
+<td>placeholder</td> %>
