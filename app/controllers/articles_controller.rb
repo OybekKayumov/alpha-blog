@@ -10,6 +10,27 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
+  # add two actions to create and new
+  # and we need new views in /views/articles
+  def new
+    
+  end
+  
+  def create
+    # render plain: params[:article]
+    # @article = Article.new(params[:article])
+    @article = Article.new(params.require(:article).permit(:title, :description))
+    # render plain: @article.inspect
+    @article.save
+    
+    # redirect saved article o show page
+    # redirect_to article_path(@article)
+    # shortend path
+    redirect_to @article
+
+  end
+
+  
 
 end
 
