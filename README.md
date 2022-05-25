@@ -5,6 +5,9 @@
 
 - [home](https://oybekkayumov-alpha-blog.herokuapp.com/)
 - [about](https://oybekkayumov-alpha-blog.herokuapp.com/about)
+- [articles](https://oybekkayumov-alpha-blog.herokuapp.com/articles)
+- [new article](https://oybekkayumov-alpha-blog.herokuapp.com/articles/new)
+- [edit article](https://oybekkayumov-alpha-blog.herokuapp.com/articles/1/edit)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
