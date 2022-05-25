@@ -1,7 +1,22 @@
 <h1>Create a new article</h1>
 <p>from /app/models/views.new.html.erb</p>
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%# WE ENTER THIS BLOCK, IF ANY ERRORS  %>
+<%# @article from create action articles_controller.rb %>
+<% if @article.errors.any? %>
+  <h2>The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+    <%# display message in list%>
+      <li><%= msg %></li>
+    <% end %>  
+  </ul>
+<% end %>
+
+
+
+<%# <%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with scope: :article, url: articles_path, data: { turbo: false } , local: true do |f| %>
   <p>
     <%= f.label :title %><br/>
     <%= f.text_field :title %>
@@ -18,3 +33,7 @@
 
 
 <% end %>
+
+
+<%# not rendering errors list issue %>
+<%# https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/learn/lecture/3850566#questions/16509660 %>
