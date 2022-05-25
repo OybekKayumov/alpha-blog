@@ -17,6 +17,10 @@ class ArticlesController < ApplicationController
     # saving block in new.html.erb
     @article = Article.new
   end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
   
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
@@ -30,6 +34,21 @@ class ArticlesController < ApplicationController
     end
 
   end  
+
+  def update
+    # find article to edit
+    @article = Article.find(params[:id])
+    # update existing article
+    if @article.update(params.require(:article).permit(:title, :description))
+      # if true show msg and go to the page article
+      flash[:notice] = "Article was updated successfully!"
+      redirect_to @article
+    else
+      # show edit page again to correct again
+      render 'edit'
+    end
+
+  end
 
 end
 
