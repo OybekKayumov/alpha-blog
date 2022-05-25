@@ -50,6 +50,14 @@ class ArticlesController < ApplicationController
 
   end
 
+  def destroy
+    # find article to delete
+    @article = Article.find(params[:id])
+    @article.destroy
+    redirect_to articles_path, status: :see_other
+    
+  end
+
 end
 
 # turn to instance variable
