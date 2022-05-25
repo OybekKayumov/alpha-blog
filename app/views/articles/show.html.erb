@@ -3,6 +3,16 @@
 <p><strong>Title: </strong><%= @article.title %></p>
 <p><strong>Description: </strong><%= @article.description %></p>
 
+<%= link_to 'Edit', edit_article_path(@article) %> | 
 
+<%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} %> |
+
+<%= link_to 'Retutn to articles listing', articles_path %>
+
+<%# |  separate %> 
   <%# evaluate and render to the screen %>
 <%# <%= @article.title %> 
+
+<%#  
+<%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete, "trubo-confirm": "Are you sure?" } %> 
+
