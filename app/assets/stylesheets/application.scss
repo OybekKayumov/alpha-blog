@@ -1,0 +1,22 @@
+@import "bootstrap";
+
+// @import "custom";
+
+.navbar {
+  background-color: #fdf6ea !important;
+}
+
+// .navbar-toggler {
+//   background-color: #333;
+// }
+
+.navbar-toggle{
+  // background-color: transparent;
+  // background-image: none;
+  // border: 1px solid transparent;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-color: #fff;
+  // background-color: transparent;
+}

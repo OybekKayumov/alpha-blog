@@ -9,10 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ * 
  *= require_tree .
  *= require_self
  */
+
+ /* works with not full functionality */
+ /* @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"; */
+ 
 
  body {
    font-family: 'Rubik',sans-serif;
