@@ -1,0 +1,5 @@
+<%# show message if article saved without any errors %>
+  <%# comes from article.controller.rb flash[:notise] = "msg" %>
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %>

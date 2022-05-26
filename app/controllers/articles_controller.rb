@@ -68,6 +68,8 @@ class ArticlesController < ApplicationController
 
 
   # use only inside of this controller, DRY
+  # always should be on the bottom of controller code after all methods,
+  # no needs to use "end" 
   private
 
   def set_article
