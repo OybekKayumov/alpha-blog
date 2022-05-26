@@ -1,6 +1,35 @@
-<h1>Article listing page</h1>
-<p>rendering from /views/articles/index.html.erb</p>
+<h1 class="text-center mt-4">Listing All Articles</h1>
+<p class="text-center">rendering from /views/articles/index.html.erb</p>
 
+<div class="container">
+
+  <% @articles.each do |article| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8">
+    
+        <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= article.title %></h5>
+            <p class="card-text"><%= article.description %></p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  <% end %>
+
+</div>
+
+
+<%#  
 <table>
   <thead>
     <tr>
@@ -11,21 +40,21 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
+    <% @articles.each do  |article| !
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.description %></td>
-        <td><%= link_to 'Show', article_path(article) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %>
+        <td><%= article.title !</td>
+        <td><%= article.description !</td>
+        <td><%= link_to 'Show', article_path(article) !</td>
+        <td><%= link_to 'Edit', edit_article_path(article) !</td>
+        <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } !
         </td> 
       </tr>
-    <% end %>
+    <% end 
   </tbody>
 </table>
 
 <p>
-  <%= link_to "Create new article", new_article_path %>
+  <%= link_to "Create new article", new_article_path !
 </p>
 
 
@@ -40,3 +69,5 @@
 
 <%# 
  <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} </td> %>
+
+ <%# !-->%>  %>
