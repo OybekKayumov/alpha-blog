@@ -21,7 +21,10 @@
 
           </div>
           <div class="card-footer text-muted">
-            2 days ago
+            <small>
+              Created <%= time_ago_in_words(article.created_at) %> ago, 
+              Edited <%= time_ago_in_words(article.updated_at) %> ago.
+            </small>
           </div>
         </div>
         
