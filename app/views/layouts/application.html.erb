@@ -13,9 +13,11 @@
   <body>
   <%# show message if article saved without any errors %>
   <%# comes from article.controller.rb flash[:notise] = "msg" %>
-    <% flash.each do |name, msg| %>
-      <%= msg %>
-    <% end %>
+    <%# <% flash.each do |name, msg| %>
+      <%# <%= msg %> 
+    <%# <% end %> 
+  <%# take flash from _messages.html.erb, using partial file %>
+  <%= render 'layouts/messages' %>
 
     <%= yield %>
   </body>
