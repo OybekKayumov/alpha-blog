@@ -1,33 +1,36 @@
 <h1>Edit article</h1>
 <p>from /app/models/views/edit.html.erb</p>
 
-<% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being saved</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>  
-  </ul>
-<% end %>
+<%= render 'form' %>
 
-<%= form_with(model: @article, data: { turbo: false } , local: true) do |f| %>
+<%# <% if @article.errors.any? %> 
+  <%# <h2>The following errors prevented the article from being saved</h2> %>
+  <%# <ul> %>
+    <%# <% @article.errors.full_messages.each do |msg| %> 
+      <%# <li><%= msg </li> 
+    <%# <% end %>   
+  <%# </ul> %>
+<%# <% end %> 
 
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
+<%# <%= form_with(model: @article, data: { turbo: false } , local: true) do |f| %> 
 
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
+  <%# <p> %>
+    <%# <%= f.label :title <br/>
+    <%# <%= f.text_field :title %> 
+  <%# </p>  %>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <%# <p> %>
+    <%# <%= f.label :description <br/> 
+    <%# <%= f.text_area :description %> 
+  <%# </p> %>
+
+  <%# <p> %>
+    <%# <%= f.submit %> 
+  <%# </p> %>
 
 
-<% end %>
+<%# <% end %>
+
 
 <%= link_to 'Cancel and retutn to articles listing', articles_path %>
 
