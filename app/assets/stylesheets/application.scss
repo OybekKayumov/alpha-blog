@@ -4,7 +4,52 @@
 
 .navbar {
   background-color: #fdf6ea !important;
+  background-color: #333 !important;
 }
+
+.nav-link {
+  color: #fff !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7rem;
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#home-container {
+  // margin-top: 25px;
+}
+
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--bs-light);
+  border-radius: .3rem;
+  background-image: asset-url('jumbo-copy.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: lightgrey;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
 
 // .navbar-toggler {
 //   background-color: #333;
