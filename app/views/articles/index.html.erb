@@ -8,13 +8,17 @@
       <div class="col-8">
     
         <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
-          <div class="card-header">
-            Featured
+          <div class="card-header font-italic">
+            by Oybek Kayumov
           </div>
           <div class="card-body">
-            <h5 class="card-title"><%= article.title %></h5>
-            <p class="card-text"><%= article.description %></p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success" %></h5>
+            <p class="card-text"><%= truncate(article.description, length: 100) %></p>
+
+            <a href="#" class="btn btn-outline-success">View</a>
+            <a href="#" class="btn btn-outline-info">Edit</a>
+            <a href="#" class="btn btn-outline-danger">Delete</a>
+
           </div>
           <div class="card-footer text-muted">
             2 days ago
