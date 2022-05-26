@@ -1,27 +1,46 @@
-<% if @article.errors.any? %>
-  <h2>The following errors prevented the article from being saved</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>  
-  </ul>
-<% end %>
+<div class="container">
 
-<%= form_with(model: @article, data: { turbo: false } , local: true) do |f| %>
+  <% if @article.errors.any? %>
+    <h2>The following errors prevented the article from being saved</h2>
+    <ul>
+      <% @article.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>  
+    </ul>
+  <% end %>
 
-  <p>
-    <%= f.label :title %><br/>
-    <%= f.text_field :title %>
-  </p>
+  <div class="row justify-content-center">
+    <div class="col-10">
+          
+      <%= form_with(model: @article, class:"shadow p-3 mb-3 bg-success rounded",  data: { turbo: false } , local: true) do |f| %>
 
-  <p>
-    <%= f.label :description %><br/>
-    <%= f.text_area :description %>
-  </p>
+        <div class="form-group row mt-4">
+          <%# <p> %>
+          <%= f.label :title, class: "col-2 col-form-label text-light" %>
+          
+          <div class="col-10">
+            <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Title of Article" %>
+          </div>
+          <%# </p> %>
+        </div>
 
-  <p>
-    <%= f.submit %>
-  </p>
+        
+        <div class="form-group row mt-4">
+          <%= f.label :description, class: "col-2 col-form-label text-light" %>
+          <div class="col-10">
+            <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Description of Article" %>
+          </div>
+        </div>
 
+        <div class="form-group text-center mt-4">
+          <%= f.submit class: "btn btn-outline-light btn-lg" %>
+        </div>
 
-<% end %>
+      <% end %>
+    </div>
+    
+    <div class="text-center">
+      <%= link_to '[ Cancel and retutn to articles listing ]', articles_path, class:"text-success" %>
+    </div>
+  </div>
+</div>
