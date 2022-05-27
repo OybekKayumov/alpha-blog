@@ -1,5 +1,14 @@
 <%# show message if article saved without any errors %>
   <%# comes from article.controller.rb flash[:notise] = "msg" %>
-    <% flash.each do |name, msg| %>
-      <%= msg %>
-    <% end %>
+    <div class="container">        
+      <% flash.each do |name, msg| %>
+
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+        <%= msg %>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+      </div>
+      <% end %>
+    </div>

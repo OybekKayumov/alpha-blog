@@ -1,7 +1,12 @@
-<h1>Create a new article</h1>
-<p>from /app/models/views/new.html.erb</p>
+<div id="page-content">
+  <h1 class="text-center mt-3">Create a new article</h1>
+  <p class="text-center mt-3">from /app/models/views/new.html.erb</p>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+  
+  <%# <%= link_to 'Retutn to articles listing', articles_path %>
+</div>
+
 
 <%# WE ENTER THIS BLOCK, IF ANY ERRORS  %>
 <%# @article from create action articles_controller.rb %>
@@ -36,7 +41,7 @@
 
 <%# <% end %>
 
-<%= link_to 'Retutn to articles listing', articles_path %>
+
 
 
 <%# not rendering errors list issue %>

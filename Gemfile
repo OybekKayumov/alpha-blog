@@ -44,7 +44,9 @@ gem 'tzinfo-data', '~> 1.2019', '>= 1.2019.2'
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
+gem "jquery-rails"
+gem "bootstrap"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

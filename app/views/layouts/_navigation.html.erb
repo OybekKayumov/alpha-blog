@@ -1,45 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>AlphaBlog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <body class="d-flex flex-column">
-  <%# show message if article saved without any errors %>
-  <%# comes from article.controller.rb flash[:notise] = "msg" %>
-    <%# <% flash.each do |name, msg| %>
-      <%# <%= msg %> 
-    <%# <% end %> 
-  <%# take flash from _messages.html.erb, using partial file %>
-
-    <%# <nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" id="logo" href="#">ALPHA BLOG<i class="fas fa-blogger    "></i></a>
+        <%# <a class="navbar-brand" id="logo" href="#">ALPHA BLOG<i class="fas fa-blogger    "></i></a> %>
+
+        <%= link_to "ALPHA BLOG", root_path, class:"navbar-brand", id:"logo" %>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <%# <a class="nav-link active" aria-current="page" href="#">Home</a> %>
+
+              <%# <%= link_to "Articles", articles_path, class:"nav-link active" %> 
+              <%= link_to "About", about_path, class:"nav-link active" %>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Articles
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <%# <li><a class="dropdown-item" href="#">Action</a></li> %>
+                <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+
+                <%# <li><a class="dropdown-item" href="#">Another action</a></li> %>
+                <%= link_to "View articles", articles_path, class: "dropdown-item" %>
+
                 <li><hr class="dropdown-divider"></li>
+
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
@@ -49,18 +40,8 @@
           </ul>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success text-white" type="submit">Search</button>
           </form>
         </div>
       </div>
-    </nav> %>
-
-    <%= render 'layouts/navigation' %>
-    <%= render 'layouts/messages' %>
-
-    <%= yield %>
-
-    <%= render 'layouts/footer' %>
-
-  </body>
-</html>
+    </nav>

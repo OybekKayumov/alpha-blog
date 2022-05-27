@@ -1,14 +1,16 @@
-<h1>Showing article details</h1>
+<%# <h1>Showing article details</h1> %>
 
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
+<%# <p><strong>Title: </strong><%= @article.title ></p> %>
+<%# <p><strong>Description: </strong><%= @article.description ></p> %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> | 
+<%# <%= link_to 'Edit', edit_article_path(@article)  |  %>
 
-<%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"} %> |
+<%# <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete , "turbo-confirm": "Are you sure?"}  | %>
 
-<%= link_to 'Retutn to articles listing', articles_path %>
+<%# <%= link_to 'Retutn to articles listing', articles_path %> 
 
+
+<%# commented %>
 <%# |  separate %> 
   <%# evaluate and render to the screen %>
 <%# <%= @article.title %> 
@@ -16,3 +18,38 @@
 <%#  
 <%= link_to 'Delete', article_path(@article), data: { "turbo-method": :delete, "trubo-confirm": "Are you sure?" } %> 
 
+
+<h2 class="text-center mt-4"><%= @article.title %></h2>
+<p class="text-center">rendering from /views/articles/index.html.erb</p>
+
+<div class="container">
+
+    <div class="row justify-content-md-center">
+      <div class="col-8">
+    
+        <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            by Oybek Kayumov
+          </div>
+          <div class="card-body">
+            <div class="card-text text-start"><%= simple_format(@article.description) %></div>
+
+            <%# <a href="#" class="btn btn-outline-info">Edit</a> %>
+            <%= link_to "Edit", edit_article_path(@article), class:"btn btn-outline-info" %>
+
+            <%# <a href="#" class="btn btn-outline-danger">Delete</a> %>
+            <%= link_to "Delete", article_path(@article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+
+          </div>
+          <div class="card-footer text-muted">
+            <small>
+              Created <%= time_ago_in_words(@article.created_at) %> ago, 
+              Edited <%= time_ago_in_words(@article.updated_at) %> ago.
+            </small>
+          </div>
+        </div>
+        
+      </div>
+    </div> 
+
+</div>

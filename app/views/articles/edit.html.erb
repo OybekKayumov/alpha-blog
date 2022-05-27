@@ -1,7 +1,12 @@
-<h1>Edit article</h1>
-<p>from /app/models/views/edit.html.erb</p>
+<div id="page-content">
+  <h1 class="text-center mt-3">Edit article</h1>
+  <p class="text-center mt-3">from /app/models/views/edit.html.erb</p>
 
-<%= render 'form' %>
+  <%= render 'form' %>
+
+  <%# <%= link_to 'Cancel and retutn to articles listing', articles_path %> 
+
+</div>
 
 <%# <% if @article.errors.any? %> 
   <%# <h2>The following errors prevented the article from being saved</h2> %>
@@ -32,7 +37,7 @@
 <%# <% end %>
 
 
-<%= link_to 'Cancel and retutn to articles listing', articles_path %>
+
 
 
 <%# not rendering errors list issue %>
