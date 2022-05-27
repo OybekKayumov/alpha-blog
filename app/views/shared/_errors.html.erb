@@ -1,7 +1,7 @@
 <% if @article.errors.any? %>
 
   <%# add bootstrap alert %>
-  <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <h4 class="alert-heading">The following errors prevented the article from being saved!</h4>
 
     <ul>
@@ -9,5 +9,16 @@
         <li><%= msg %></li>
       <% end %>  
     </ul>
+
+    <%# close btn %>
+    <%# <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> %>
+
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
   </div>
 <% end %>
+
+
+<%# alert-dismissible fade show - add x button to close alert  %>
