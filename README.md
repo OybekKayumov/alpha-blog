@@ -1,6 +1,6 @@
 # alpha-blog
 
-![image](https://user-images.githubusercontent.com/85465559/170616858-6d5f9f5e-8454-4a6f-9e7f-67deca3515aa.png)
+![image](https://user-images.githubusercontent.com/85465559/170617174-2cffb73f-4b18-4ba8-b957-1d02e670b94a.png)
 
 ![image](https://user-images.githubusercontent.com/85465559/170616948-73597530-d84a-402b-80e4-dc308c56d09e.png)
 
