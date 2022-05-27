@@ -19,12 +19,17 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
+                Articles
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <%# <li><a class="dropdown-item" href="#">Action</a></li> %>
+                <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
+
+                <%# <li><a class="dropdown-item" href="#">Another action</a></li> %>
+                <%= link_to "View articles", articles_path, class: "dropdown-item" %>
+
                 <li><hr class="dropdown-divider"></li>
+                
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>

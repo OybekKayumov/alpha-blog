@@ -32,7 +32,7 @@
             by Oybek Kayumov
           </div>
           <div class="card-body">
-            <p class="card-text"><%= simple_format(@article.description) %></p>
+            <div class="card-text text-start"><%= simple_format(@article.description) %></div>
 
             <%# <a href="#" class="btn btn-outline-info">Edit</a> %>
             <%= link_to "Edit", edit_article_path(@article), class:"btn btn-outline-info" %>
