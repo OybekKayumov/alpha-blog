@@ -29,7 +29,8 @@
     
         <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
           <div class="card-header font-italic">
-            by Oybek Kayumov
+            <%# by Oybek Kayumov %>
+            by <%= @article.user.username if @article.user %>
           </div>
           <div class="card-body">
             <div class="card-text text-start"><%= simple_format(@article.description) %></div>
