@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   
   # build a route and send to users controller and then new action
   get 'signup', to: 'users#new'
+
+  # post 'users', to: 'users#create'
+  # this line was changed (post 'users', to: 'users#create'):
+  resources :users, except: [:new]
 end
 
 # 3

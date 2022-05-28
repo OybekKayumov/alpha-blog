@@ -18,7 +18,7 @@
     <div class="col-10">
 
       <%# to be in same size fith form   %>
-      <%= render 'shared/errors' %> 
+      <%= render 'shared/errors', obj: @article %> 
           
       <%= form_with(model: @article, class:"shadow p-3 mb-3 bg-success rounded",  data: { turbo: false } , local: true) do |f| %>
 
