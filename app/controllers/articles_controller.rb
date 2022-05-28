@@ -28,6 +28,9 @@ class ArticlesController < ApplicationController
     # change with private method
     @article = Article.new(article_params)
 
+    # hardcored add user, works with any valid user in users table
+    @article.user = User.first
+
     # add validation if
     if @article.save
       # show message after succesfully saving, flash :key = "value"
