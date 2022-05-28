@@ -107,3 +107,5 @@ end
 # redirect saved article o show page
 # redirect_to article_path(@article)
 # shortend path
+
+# add one-to-many association between users and articles from back-end N130
