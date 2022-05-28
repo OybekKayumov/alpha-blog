@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   
   # we have all resources, we can write
   resources :articles
+  
+  # build a route and send to users controller and then new action
+  get 'signup', to: 'users#new'
 end
 
 # 3
