@@ -1,0 +1,46 @@
+
+<div class="container">
+
+  <% @articles.each do |article| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8">
+    
+        <div class="card text-center mt-4 shadow mb-5 bg-white rounded">
+          <div class="card-header font-italic">
+            <%# by Oybek Kayumov %>
+            <%# by <%= article.user.username if article.user %> 
+            <% if article.user %>
+              by <%= link_to article.user.username, user_path(article.user) %>
+            <% end %>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to article.title, article_path(article), class: "text-success" %></h5>
+            <p class="card-text"><%= truncate(article.description, length: 100) %></p>
+
+            <%# <a href="#" class="btn btn-outline-success">View</a> %>
+            <%# <a href="#" class="btn btn-outline-info">Edit</a> %>
+            <%# <a href="#" class="btn btn-outline-danger">Delete</a> %>
+
+            <%= link_to "View", article_path(article), class: "btn btn-outline-success" %>
+            
+            <%= link_to "Edit", edit_article_path(article), class: "btn btn-outline-info" %>
+            
+            <%= link_to "Delete", article_path(article), class: "btn btn-outline-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+
+          </div>
+          <div class="card-footer text-muted">
+            <small>
+              Created <%= time_ago_in_words(article.created_at) %> ago, 
+              Edited <%= time_ago_in_words(article.updated_at) %> ago.
+            </small>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+  <% end %>
+
+</div>
+
+
