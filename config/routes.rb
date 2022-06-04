@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   # post 'users', to: 'users#create'
   # this line was changed (post 'users', to: 'users#create'):
   resources :users, except: [:new]
+
+  # login form
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'session#create'
+  delete 'logout', to: 'session#destroy'
 end
 
 # 3
