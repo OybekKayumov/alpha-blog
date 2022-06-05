@@ -1,53 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <%# <a class="navbar-brand" id="logo" href="#">ALPHA BLOG<i class="fas fa-blogger    "></i></a> %>
-
-        <%= link_to "ALPHA BLOG", root_path, class:"navbar-brand", id:"logo" %>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <%= link_to "ALPHA BLOG", root_path, class: "navbar-brand", id: "logo" %>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <%# <a class="nav-link active" aria-current="page" href="#">Home</a> %>
-
-              <%# <%= link_to "Articles", articles_path, class:"nav-link active" %> 
+              
               <%= link_to "About", about_path, class:"nav-link active" %>
             </li>
             <li class="nav-item">
-              <%# <a class="nav-link" href="#">Link</a> %>
-              <%= link_to "Bloggers", users_path, class:"nav-link" %>
+             
+              <%= link_to "Bloggers", users_path, class: "nav-link" %>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Articles
               </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <%# <li><a class="dropdown-item" href="#">Action</a></li> %>
-                <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
-
-                <%# <li><a class="dropdown-item" href="#">Another action</a></li> %>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">                
+                <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>                
                 <%= link_to "View articles", articles_path, class: "dropdown-item" %>
-
-                <li><hr class="dropdown-divider"></li>
-
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">              
+              <%= link_to 'Log in', login_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%# <a class="nav-link disabled">Disabled</a> %>
-              <%= link_to "Log in", login_path, class: "nav-link" %>
-            </li>
-
-            <li class="nav-item">
-              <%= link_to "Logout", logout_path, class: "nav-link", method: :delete %>
+              <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success text-white" type="submit">Search</button>
+          <form class="form-inline my-2 my-lg-0">          
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form>
         </div>
-      </div>
     </nav>

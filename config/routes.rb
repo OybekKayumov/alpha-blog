@@ -19,8 +19,8 @@ Rails.application.routes.draw do
 
   # login form
   get 'login', to: 'sessions#new'
-  post 'login', to: 'session#create'
-  delete 'logout', to: 'session#destroy'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
 
 # 3
